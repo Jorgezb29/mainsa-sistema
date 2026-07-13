@@ -4,6 +4,90 @@ import client from '../api/client';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
+// ============================================================
+// ICONOS SVG PROFESIONALES
+// ============================================================
+
+const IconDashboard = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+  </svg>
+);
+
+const IconDocument = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>
+);
+
+const IconSignature = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+  </svg>
+);
+
+const IconBell = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+  </svg>
+);
+
+const IconUsers = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+);
+
+const IconUser = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+  </svg>
+);
+
+const IconUpload = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+  </svg>
+);
+
+const IconExport = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+  </svg>
+);
+
+const IconEye = () => (
+  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+  </svg>
+);
+
+const IconAlert = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  </svg>
+);
+
+const IconMegaphone = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+  </svg>
+);
+
+const IconLogout = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+  </svg>
+);
+
+// ============================================================
+// COMPONENTE PRINCIPAL
+// ============================================================
+
 export default function AdminPage() {
   const { user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -13,7 +97,6 @@ export default function AdminPage() {
   const [notificaciones, setNotificaciones] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Estadísticas
   const [stats, setStats] = useState({
     totalTrabajadores: 0,
     documentosPendientes: 0,
@@ -21,7 +104,6 @@ export default function AdminPage() {
     descargasMes: 0
   });
 
-  // Formularios
   const [nuevoDocumento, setNuevoDocumento] = useState({
     tipo: 'CONTRATO',
     titulo: '',
@@ -44,8 +126,6 @@ export default function AdminPage() {
       if (activeTab === 'dashboard' || activeTab === 'documentos') {
         const docRes = await client.get('/documentos/all');
         setDocumentos(docRes.data.documentos || []);
-        
-        // Calcular estadísticas
         const pendientes = docRes.data.documentos?.filter(d => d.estado_firma === 'PENDIENTE').length || 0;
         setStats(prev => ({ ...prev, documentosPendientes: pendientes }));
       }
@@ -84,7 +164,7 @@ export default function AdminPage() {
     e.preventDefault();
     try {
       await client.post('/documentos/cargar', nuevoDocumento);
-      toast.success('✅ Documento cargado exitosamente');
+      toast.success('Documento cargado exitosamente');
       setNuevoDocumento({ tipo: 'CONTRATO', titulo: '', usuario_id: '' });
       cargarDatos();
     } catch (error) {
@@ -96,7 +176,7 @@ export default function AdminPage() {
     e.preventDefault();
     try {
       await client.post('/notificaciones/crear', nuevaNotificacion);
-      toast.success('✅ Notificación creada exitosamente');
+      toast.success('Notificación creada exitosamente');
       setNuevaNotificacion({ titulo: '', contenido: '', turno_destino: 'TODOS' });
       cargarDatos();
     } catch (error) {
@@ -125,11 +205,11 @@ export default function AdminPage() {
   };
 
   const menuItems = [
-    { id: 'dashboard', icon: '📊', label: 'Dashboard' },
-    { id: 'documentos', icon: '📄', label: 'Documentos' },
-    { id: 'firmas', icon: '✍️', label: 'Firmas' },
-    { id: 'notificaciones', icon: '🔔', label: 'Notificaciones' },
-    { id: 'usuarios', icon: '👥', label: 'Usuarios' },
+    { id: 'dashboard', icon: <IconDashboard />, label: 'Dashboard' },
+    { id: 'documentos', icon: <IconDocument />, label: 'Documentos' },
+    { id: 'firmas', icon: <IconSignature />, label: 'Firmas' },
+    { id: 'notificaciones', icon: <IconBell />, label: 'Notificaciones' },
+    { id: 'usuarios', icon: <IconUsers />, label: 'Usuarios' },
   ];
 
   return (
@@ -147,9 +227,10 @@ export default function AdminPage() {
         </div>
         <button 
           onClick={logout}
-          className="bg-transparent border border-[#444] text-gray-500 px-3 py-1.5 rounded-lg text-xs hover:border-orange-500 hover:text-orange-500 transition"
+          className="flex items-center gap-1.5 bg-transparent border border-[#444] text-gray-500 px-3 py-1.5 rounded-lg text-xs hover:border-orange-500 hover:text-orange-500 transition"
         >
-          Cerrar Sesión
+          <IconLogout />
+          <span>Cerrar Sesión</span>
         </button>
       </header>
 
@@ -160,13 +241,13 @@ export default function AdminPage() {
             <div
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`px-5 py-3 text-sm cursor-pointer transition-all border-l-3 ${
+              className={`flex items-center gap-2.5 px-5 py-3 text-sm cursor-pointer transition-all border-l-3 ${
                 activeTab === item.id 
                   ? 'text-orange-500 border-l-orange-500 bg-orange-500/5' 
                   : 'text-gray-500 hover:text-white hover:bg-white/5 border-l-transparent'
               }`}
             >
-              <span className="mr-2.5">{item.icon}</span>
+              {item.icon}
               <span>{item.label}</span>
             </div>
           ))}
@@ -181,43 +262,56 @@ export default function AdminPage() {
               {/* DASHBOARD */}
               {activeTab === 'dashboard' && (
                 <>
-                  <h2 className="text-xl mb-5">
-                    📊 <span className="text-orange-500">Dashboard</span> RRHH
+                  <h2 className="text-xl mb-5 font-semibold tracking-wide">
+                    <span className="text-orange-500">Dashboard</span> RRHH
                   </h2>
 
-                  {/* Tarjetas de estadísticas */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#333]">
                       <div className="text-3xl font-bold text-orange-500">{stats.totalTrabajadores}</div>
-                      <div className="text-sm text-gray-500 mt-1">👥 Total trabajadores</div>
+                      <div className="flex items-center gap-1.5 text-sm text-gray-500 mt-1">
+                        <IconUsers />
+                        <span>Total trabajadores</span>
+                      </div>
                     </div>
                     <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#333]">
                       <div className="text-3xl font-bold text-orange-500">{stats.documentosPendientes}</div>
-                      <div className="text-sm text-gray-500 mt-1">📄 Documentos pendientes</div>
+                      <div className="flex items-center gap-1.5 text-sm text-gray-500 mt-1">
+                        <IconDocument />
+                        <span>Documentos pendientes</span>
+                      </div>
                     </div>
                     <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#333]">
                       <div className="text-3xl font-bold text-orange-500">{stats.notificacionesHoy}</div>
-                      <div className="text-sm text-gray-500 mt-1">🔔 Notificaciones hoy</div>
+                      <div className="flex items-center gap-1.5 text-sm text-gray-500 mt-1">
+                        <IconBell />
+                        <span>Notificaciones hoy</span>
+                      </div>
                     </div>
                     <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#333]">
                       <div className="text-3xl font-bold text-orange-500">{stats.descargasMes || 48}</div>
-                      <div className="text-sm text-gray-500 mt-1">⬇ Descargas del mes</div>
+                      <div className="flex items-center gap-1.5 text-sm text-gray-500 mt-1">
+                        <IconExport />
+                        <span>Descargas del mes</span>
+                      </div>
                     </div>
                   </div>
 
                   {/* Tabla de documentos */}
                   <div className="bg-[#2a2a2a] rounded-xl border border-[#333] overflow-hidden">
                     <div className="p-4 border-b border-[#333] flex flex-wrap justify-between items-center gap-2">
-                      <h3 className="text-sm font-medium">📋 Últimos documentos cargados</h3>
+                      <h3 className="text-sm font-medium">Últimos documentos cargados</h3>
                       <div className="flex gap-2 flex-wrap">
                         <button 
                           onClick={() => setActiveTab('documentos')}
-                          className="px-3 py-1.5 bg-orange-500 text-white rounded-lg text-xs font-semibold hover:bg-orange-600 transition"
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-orange-500 text-white rounded-lg text-xs font-semibold hover:bg-orange-600 transition"
                         >
-                          + Cargar nuevo
+                          <IconUpload />
+                          <span>Cargar nuevo</span>
                         </button>
-                        <button className="px-3 py-1.5 bg-[#333] text-gray-400 rounded-lg text-xs hover:bg-[#444] transition">
-                          📤 Exportar
+                        <button className="flex items-center gap-1.5 px-3 py-1.5 bg-[#333] text-gray-400 rounded-lg text-xs hover:bg-[#444] transition">
+                          <IconExport />
+                          <span>Exportar</span>
                         </button>
                       </div>
                     </div>
@@ -248,14 +342,10 @@ export default function AdminPage() {
                                 {new Date(doc.fecha_creacion).toLocaleDateString('es-CL')}
                               </td>
                               <td className="px-4 py-3">
-                                <button className="px-2 py-1 bg-[#333] text-gray-400 rounded text-xs hover:bg-[#444] transition">
-                                  👁 Ver
+                                <button className="flex items-center gap-1 px-2 py-1 bg-[#333] text-gray-400 rounded text-xs hover:bg-[#444] transition">
+                                  <IconEye />
+                                  <span>Ver</span>
                                 </button>
-                                {doc.estado_firma === 'RECHAZADO' && (
-                                  <button className="px-2 py-1 bg-red-500/10 text-red-400 rounded text-xs hover:bg-red-500/20 transition ml-1">
-                                    Anular
-                                  </button>
-                                )}
                               </td>
                             </tr>
                           ))}
@@ -272,9 +362,10 @@ export default function AdminPage() {
               {/* DOCUMENTOS */}
               {activeTab === 'documentos' && (
                 <div>
-                  <h2 className="text-xl mb-5">📄 <span className="text-orange-500">Documentos</span></h2>
+                  <h2 className="text-xl mb-5 font-semibold tracking-wide">
+                    <span className="text-orange-500">Documentos</span>
+                  </h2>
                   
-                  {/* Formulario de carga */}
                   <div className="bg-[#2a2a2a] rounded-xl p-6 border border-[#333] mb-6">
                     <h3 className="text-sm font-medium text-orange-500 mb-4">Cargar Nuevo Documento</h3>
                     <form onSubmit={cargarDocumento} className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -306,14 +397,14 @@ export default function AdminPage() {
                       />
                       <button
                         type="submit"
-                        className="md:col-span-3 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl transition"
+                        className="flex items-center justify-center gap-2 md:col-span-3 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl transition"
                       >
-                        📤 Cargar Documento
+                        <IconUpload />
+                        <span>Cargar Documento</span>
                       </button>
                     </form>
                   </div>
 
-                  {/* Lista de documentos */}
                   <div className="bg-[#2a2a2a] rounded-xl border border-[#333] overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
@@ -357,7 +448,9 @@ export default function AdminPage() {
               {/* FIRMAS */}
               {activeTab === 'firmas' && (
                 <div>
-                  <h2 className="text-xl mb-5">✍️ <span className="text-orange-500">Estado de Firmas</span></h2>
+                  <h2 className="text-xl mb-5 font-semibold tracking-wide">
+                    <span className="text-orange-500">Estado de Firmas</span>
+                  </h2>
                   <div className="bg-[#2a2a2a] rounded-xl border border-[#333] overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
@@ -399,9 +492,10 @@ export default function AdminPage() {
               {/* NOTIFICACIONES */}
               {activeTab === 'notificaciones' && (
                 <div>
-                  <h2 className="text-xl mb-5">🔔 <span className="text-orange-500">Notificaciones</span></h2>
+                  <h2 className="text-xl mb-5 font-semibold tracking-wide">
+                    <span className="text-orange-500">Notificaciones</span>
+                  </h2>
                   
-                  {/* Formulario */}
                   <div className="bg-[#2a2a2a] rounded-xl p-6 border border-[#333] mb-6">
                     <h3 className="text-sm font-medium text-orange-500 mb-4">Crear Notificación</h3>
                     <form onSubmit={crearNotificacion} className="grid grid-cols-1 gap-4">
@@ -433,14 +527,14 @@ export default function AdminPage() {
                       </select>
                       <button
                         type="submit"
-                        className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl transition"
+                        className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl transition"
                       >
-                        📢 Crear Notificación
+                        <IconMegaphone />
+                        <span>Crear Notificación</span>
                       </button>
                     </form>
                   </div>
 
-                  {/* Lista */}
                   <div className="bg-[#2a2a2a] rounded-xl border border-[#333] overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
@@ -474,7 +568,9 @@ export default function AdminPage() {
               {/* USUARIOS */}
               {activeTab === 'usuarios' && (
                 <div>
-                  <h2 className="text-xl mb-5">👥 <span className="text-orange-500">Usuarios</span></h2>
+                  <h2 className="text-xl mb-5 font-semibold tracking-wide">
+                    <span className="text-orange-500">Usuarios</span>
+                  </h2>
                   <div className="bg-[#2a2a2a] rounded-xl border border-[#333] overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
@@ -498,7 +594,7 @@ export default function AdminPage() {
                               <td className="px-4 py-3 text-gray-400">{usr.turno}</td>
                               <td className="px-4 py-3">
                                 <span className={`px-3 py-1 rounded-full text-xs font-semibold status-badge ${usr.activo ? 'activo' : 'inactivo'}`}>
-                                  {usr.activo ? 'Activo ✅' : 'Inactivo ❌'}
+                                  {usr.activo ? 'Activo' : 'Inactivo'}
                                 </span>
                               </td>
                             </tr>

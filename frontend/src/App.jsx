@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import DocumentosPage from "./pages/DocumentosPage";
 import NotificacionesPage from "./pages/NotificacionesPage";
 import AdminPage from "./pages/AdminPage";
+import FirmaPage from "./pages/FirmaPage";
 import { useEffect, useState } from "react";
 
 const ProtectedRoute = ({ children }) => {
@@ -71,6 +72,14 @@ function AppRoutes() {
         element={
           <ProtectedRoute>
             <AdminPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/firma/:id"
+        element={
+          <ProtectedRoute>
+            <FirmaPage />
           </ProtectedRoute>
         }
       />
